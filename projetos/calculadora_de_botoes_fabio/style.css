@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #3d2246;
+    user-select: none;
+}
+/* "Carcaça" da calculadora */
+.calculator {
+    background-color: #27221f;
+    border-radius: 20px;
+    width: 320px;
+    padding: 20px;
+}
+/* Tela da calculadora */
+.display {
+    background-color: #383131;
+    color: #fff;
+    font-size: 3rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* Alinhamento dos botões da calculadora */
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+/* Estilização dos botões genéricos */
+.botoes button {
+    padding: 20px;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 55px;
+    border: none;
+    background-color: #484343;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+/* Quando colocar mouse em cima ele escurece */
+.botoes button:hover {
+    background-color: #525252;
+}
+/* Quando clica ele pula */
+.botoes button:active {
+    transform: scale(0.95);
+}
+/* Estilização dos operadores */
+.botoes .operador {
+    background-color: #ff8000;
+    color: white;
+}
+/* Mouse hover dos operadores */
+.botoes .operador:hover {
+    background-color: #f57017;
+}
+
+/* Estilização do "apagar" */
+.botoes .apagar {
+    background-color: #e53935;
+    color: white;
+    grid-column: span 2;
+}
+/* Mouse hover do "apagar" */
+.botoes .apagar:hover {
+    background-color: #d32f2f;
+}
+
+.botoes .zeroo{
+    grid-column: span 2;
+}

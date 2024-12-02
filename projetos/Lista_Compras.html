@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #CCFCCB;
+        }
+        .container {
+            text-align: center;
+            background: #96E6B3;
+            color: rgb(37, 37, 96);
+            padding: 50px;
+            padding-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hud input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #F1FFFA;
+        }
+        .hud button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hud .adicionar{
+            background-color: rgb(85, 85, 241);
+        }
+
+        .hud .remover{
+            background-color: rgb(223, 66, 66);
+        }
+
+        .hud button:hover {
+            background-color: #0056b3;
+        }
+        ul{
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de compras</h1>
+        <div class="hud">
+            <input type="text" id="itens" placeholder="Adicione um item">
+            <button class="adicionar" type="button" onclick="adicionarItem()">Adicionar</button>
+            <button class="remover" type="button" onclick="removerItem()">Remover</button>
+        </div>
+        <ul id="listaCompra"></ul>
+    </div>
+
+    <script>
+        // Armazenamento de lista de compras
+        var listaShop = [];
+
+        // Função para adicionar um item na lista
+        function adicionarItem() {
+            let itemEntrada = document.getElementById('itens');
+            let item = itemEntrada.value.trim();
+            if (item !== "") {
+                listaShop.push(item);
+                updateListaShop();
+                itemEntrada.value = "";
+            }
+        }
+
+        function removerItem(){
+            let itemEntrada = document.getElementById('itens');
+            let item = itemEntrada.value.trim();
+            if (item !== "") {
+                listaShop.pop(item);
+                updateListaShop();
+                itemEntrada.value = "";
+            }
+        }
+
+        function updateListaShop() {
+            let elementosLista = document.getElementById('listaCompra');
+            elementosLista.innerHTML = '';
+
+            for (let i = 0; i < listaShop.length; i++) {
+                let listaItem = document.createElement('li');
+                listaItem.textContent = listaShop[i];
+                elementosLista.appendChild(listaItem);
+            }
+        }
+    </script>
+</body>
+</html>

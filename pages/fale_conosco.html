@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fale conosco</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="row align-items-center bg-secondary text-light py-3">
+            <div class="col-md-6 d-flex justify-content-start">
+                <a href="../index.html" class="link-light me-3 btn btn-primary">Home</a>
+                <a href="./portfolio.html" class="link-light me-3 btn btn-primary">Portifólio</a>
+                <a href="#" class="link-light me-3 btn btn-primary">Fale conosco</a>
+            </div>
+            <div class="col-md-6 text-end">
+                <button id="btn-notificacoes" class="btn btn-primary position-relative">
+                    <span class="position-absolute top-0 translate-middle badge bg-danger rounded-pill"
+                          style="margin-left: 80%">99+</span>Notificações
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center mt-4">
+            <div class="col-md-4 p-4 bg-secondary rounded-3 shadow">
+                <h2 class="text-center mb-4 text-white">Fale conosco</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label text-white">Nome</label>
+                        <input type="email" id="inputName" class="form-control" placeholder="Digite seu nome: ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label text-white">E-mail</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail: ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputPhone" class="form-label text-white">Telefone</label>
+                        <input type="text" id="inputPhone" class="form-control" placeholder="Digite seu telefone: ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputSubject" class="form-label text-white">Assunto</label>
+                        <input type="text" id="inputSubject" class="form-control" placeholder="Digite o assunto: ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputMessage" class="form-label text-white">Mensagem</label>
+                        <textarea rows="5" type="text" id="inputMessage" class="form-control"
+                                  placeholder="Digite sua mensagem: "></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+</head>
+
+<body>
+<div class="container-fluid">
+  <header>
+    <div class="row align-items-center bg-secondary text-light py-3">
+      <div class="col-md-6 d-flex justify-content-start">
+        <a href="#" class="link-light me-3 btn btn-primary">Home</a>
+        <a href="pages/portfolio.html" class="link-light me-3 btn btn-primary">Portifólio</a>
+        <a href="pages/fale_conosco.html" class="link-light me-3 btn btn-primary">Fale conosco</a>
+      </div>
+        <div class="col-md-6 text-end">
+          <button id="btn-notificacoes" class="btn btn-primary position-relative">
+            <span class="position-absolute top-0 translate-middle badge bg-danger rounded-pill" style="margin-left: 80%">99+</span>Notificações
+          </button>
+        </div>
+    </div>
+  </header>
+
+  <div id="notificacoes-container" class="position-absolute mt-3" style="display: none; right: 0;">
+    <div class="card" style="width: 250px;">
+      <div class="card-header bg-primary text-white">
+        Notificações
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Nova mensagem de João</li>
+        <li class="list-group-item">Sua tarefa foi atualizada</li>
+        <li class="list-group-item">Novo comentário no seu post</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu Dropdown
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="pages/portfolio.html" class="dropdown-item">Portfólio</a></li>
+          <li><a href="pages/fale_conosco.html" class="dropdown-item">Fale conosco</a></li>
+          <li><a href="#" class="dropdown-item">Item3</a></li>
+          <li>
+            <hr class="dropdown-divider">
+            <a href="index.html" class="dropdown-item">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 text-center">
+    <div class="col">
+      <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#noticia1">
+        Notícia(Collapse)
+      </button>
+      <div id="noticia1" class="collapse mt-3">
+        <div class="card card-body">
+          Professor Fábio Esposto morre aos 53 anos de idade. Veja a seguir...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 d-flex justify-content-center">
+    <div class="col-md-4">
+      <div class="card d-flex">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#meuModal">
+          Ver Perfil
+        </button>
+        <div id="meuModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="text-align: justify">
+                <h5 class="modal-title">Perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="img/F6E3606A-B462-49A3-AF4E-642CBE7053F6.jpeg" alt="" class="card-img-top mb-3">
+                <h4>Fernando Legal</h4>
+                <p>Meu nome é Fernando e eu gosto de comer torta nas horas vagas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Experiência Profissional
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Habilidades
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Formação
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-5 text-center">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Redes Sociais"
+            data-bs-content='
+                        <a href="https://www.instagram.com/fer.ear06/" target="_blank" data-bs-toggle="tooltip" title="Instagram" class="me-2"><img src="img/social-media/instagram.png"></a>
+                        <a href="https://www.linkedin.com/in/fer-ribeiro-info/" target="_blank" data-bs-toggle="tooltip" title="LinkedIn" class="me-2"><img src="img/social-media/linkedin.png"></a>
+                        <a href="https://github.com/Zina-06" target="_blank" data-bs-toggle="tooltip" title="Github"><img src="img/social-media/github.png"></a>'>
+      Redes Sociais
+    </button>
+  </footer>
+</div>
+
+<script src="./bootstrap.bundle.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    popoverTriggerList.forEach(function (popoverTriggerEl) {
+      new bootstrap.Popover(popoverTriggerEl, {
+        html: true
+      })
+    })
+
+    var btnNotificacoes = document.getElementById('btn-notificacoes');
+    var notificacoesContainer = document.getElementById('notificacoes-container');
+
+    btnNotificacoes.addEventListener('click', function () {
+      // Alterna a exibição da caixa de notificações
+      if (notificacoesContainer.style.display === 'none' || notificacoesContainer.style.display === '') {
+        notificacoesContainer.style.display = 'block';
+      } else {
+        notificacoesContainer.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+
+</html>
